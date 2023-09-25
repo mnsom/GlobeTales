@@ -1,6 +1,7 @@
 class Bookmark < ApplicationRecord
   belongs_to :user
-  belongs_to :post
+  has_many :favorites
+  has_many :posts, through: :favorites
 
   validates :name, presence: true, uniqueness: true
 end
