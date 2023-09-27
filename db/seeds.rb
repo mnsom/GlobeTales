@@ -12,9 +12,9 @@ User.destroy_all
 
 mana = User.create!(email: "mana@me.com", password: "secret", name: "Mana", avatar:"https://ca.slack-edge.com/T02NE0241-U05EFTX9EQ4-e1eac89b5a4b-512")
 tony = User.create!(email: "tony@me.com", password: "secret", name: "Tony", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
-mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
-milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
-ron = User.create!(email: "ron@me.com", password: "secret", name: "Ron", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
+mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", avatar:"https://iconbu.com/wp-content/uploads/2020/01/%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.jpg")
+milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", avatar:"https://iconbu.com/wp-content/uploads/2020/03/%E3%83%91%E3%83%B3%E3%83%80.jpg")
+ron = User.create!(email: "ron@me.com", password: "secret", name: "Ron", avatar:"https://iconbu.com/wp-content/uploads/2022/04/%E3%81%BE%E3%81%A3%E3%81%9F%E3%82%8A%E3%82%B7%E3%83%A3%E3%83%81%E3%81%95%E3%82%93.jpg")
 
 Bookmark.create!(name: "Finland", user: tony)
 Bookmark.create!(name: "Australia", user: tony)

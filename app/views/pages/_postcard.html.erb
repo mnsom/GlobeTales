@@ -1,2 +1,14 @@
-<div class="container">
+<div class="cards">
+  <% @posts.each do |post| %>
+    <div class="card-post">
+      <img src="image.jpg" alt="" class="first-img">
+      <div class="card-post-info">
+        <h3 class="mb-2"><%= post.title %></h3>
+        <div class="user-info">
+          <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
+          <p><%= post.user.name %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
