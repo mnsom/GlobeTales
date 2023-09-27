@@ -1,14 +1,16 @@
 <div class="cards">
   <% @posts.each do |post| %>
-    <div class="card-post">
-      <img src="image.jpg" alt="" class="first-img">
-      <div class="card-post-info">
-        <h3 class="mb-2"><%= post.title %></h3>
-        <div class="user-info">
-          <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
-          <p><%= post.user.name %></p>
+    <%= link_to post_path(post), class:"text-decoration-none text-black" do %>
+      <div class="card-post">
+        <%= image_tag "example.png", class:"first-img" %>
+        <div class="card-post-info">
+          <h3 class="mb-2"><%= post.title %></h3>
+          <div class="user-info">
+            <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
+            <p><%= post.user.name %></p>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
