@@ -6,4 +6,7 @@ class Post < ApplicationRecord
   validates :title, :description, :location, :category, presence: true
   validates :title, uniqueness: true
   validates :description, length: { minimum: 10 }
+
+  include PgSearch::Model
+  pg_search_scope :global_search, against: [:title], using: { tsearch: { prefix: true } }
 end
