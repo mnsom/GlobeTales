@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   has_many_attached :photos, dependent: :destroy
 
   validates :title, :description, :location, :category, presence: true
-  validates :title, uniqueness: true
+  validates :title, uniqueness: true, length: { maximum: 30 }
   validates :description, length: { minimum: 10 }
 
   include PgSearch::Model
