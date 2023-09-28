@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts =
+      if params[:q].present?
+        Post.global_search(params[:q])
+      else
+        @posts = Post.all
+      end
   end
 
   def show
