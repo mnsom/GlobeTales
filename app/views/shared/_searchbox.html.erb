@@ -1,0 +1,14 @@
+<div class="justify-content-center" id="overwrite">
+  <div class="form-outline">
+    <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :q,
+            params[:q],
+            class: "form-control",
+            placeholder: "キーワードで検索"
+        %>
+      <%= button_tag name: "", class: "btn btn-info" do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    <% end %>
+  </div>
+</div>
