@@ -10,7 +10,7 @@ Post.destroy_all
 Bookmark.destroy_all
 User.destroy_all
 
-mana = User.create!(email: "mana@me.com", password: "secret", name: "Mana", avatar:"https://ca.slack-edge.com/T02NE0241-U05EFTX9EQ4-e1eac89b5a4b-512")
+mana = User.create!(email: "mana@me.com", password: "secret", name: "Mana", avatar:"https://iconbu.com/wp-content/uploads/2023/09/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E5%85%8E%E3%81%95%E3%82%93.jpg")
 tony = User.create!(email: "tony@me.com", password: "secret", name: "Tony", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
 mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", avatar:"https://iconbu.com/wp-content/uploads/2020/01/%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.jpg")
 milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", avatar:"https://iconbu.com/wp-content/uploads/2020/03/%E3%83%91%E3%83%B3%E3%83%80.jpg")
