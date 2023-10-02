@@ -2,7 +2,11 @@
   <% @posts.each do |post| %>
     <%= link_to post_path(post), class:"text-decoration-none text-black" do %>
       <div class="card-post">
-        <%= image_tag "example.png", class:"first-img" %>
+        <% if post.photos.attached? %>
+          <img src="<%= cl_image_path(post.photos.first.key)%>", class="first-img" >
+        <% else %>
+          <%= image_tag "example.png", class:"first-img" %>
+        <% end %>
         <div class="card-post-info">
           <h3 class="mb-2"><%= post.title %></h3>
           <div class="user-info">
