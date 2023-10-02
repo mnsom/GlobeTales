@@ -2,9 +2,9 @@ class PostsController < ApplicationController
   def index
     @posts =
       if params[:q].present?
-        Post.global_search(params[:q])
+        Post.global_search(params[:q]).order(created_at: :desc)
       else
-        @posts = Post.all
+        @posts = Post.all.order(created_at: :desc)
       end
   end
 
