@@ -9,4 +9,6 @@ class Post < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search, against: [:title], using: { tsearch: { prefix: true } }
+
+  CATEGORIES = ["学校", "仕事", "生活", "手続き", "言語", "住居", "食", "気候", "その他"]
 end
