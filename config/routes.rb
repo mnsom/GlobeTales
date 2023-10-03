@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :posts
 
   namespace :mypage do
-    resources :posts, only: %i[index show]
+    resources :posts, only: %i[index show destroy]
     resources :bookmarks
   end
 end
