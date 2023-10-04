@@ -10,11 +10,11 @@ Post.destroy_all
 Bookmark.destroy_all
 User.destroy_all
 
-mana = User.create!(email: "mana@me.com", password: "secret", name: "Mana", description:"フィンランドのヘルシンキ在住。20代 ムーミンが好き", avatar:"https://iconbu.com/wp-content/uploads/2023/09/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E5%85%8E%E3%81%95%E3%82%93.jpg")
-tony = User.create!(email: "tony@me.com", password: "secret", name: "Tony", description:"ハノイ在住歴5年　趣味は動物と触れ合うこと", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
-mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", description:"イタリアのミラノ在住。好きな食べ物はパスタとピザ", avatar:"https://iconbu.com/wp-content/uploads/2020/01/%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.jpg")
-milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", description:"", avatar:"https://iconbu.com/wp-content/uploads/2020/03/%E3%83%91%E3%83%B3%E3%83%80.jpg")
-ron = User.create!(email: "ron@me.com", password: "secret", name: "Ron", description:"高校生のときに、インドのデリーに引越し。スパイスカレー作りが得意。", avatar:"https://iconbu.com/wp-content/uploads/2022/04/%E3%81%BE%E3%81%A3%E3%81%9F%E3%82%8A%E3%82%B7%E3%83%A3%E3%83%81%E3%81%95%E3%82%93.jpg")
+mana = User.create!(email: "mana@me.com", password: "secret", name: "Mana", location: "ヘルシンキ", description:"フィンランドのヘルシンキ在住。20代 ムーミンが好き", avatar:"https://iconbu.com/wp-content/uploads/2023/09/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E5%85%8E%E3%81%95%E3%82%93.jpg")
+tony = User.create!(email: "tony@me.com", password: "secret", name: "Tony", location: "ハノイ", description:"ハノイ在住歴5年　趣味は動物と触れ合うこと", avatar:"https://www.la-comic-illust.top/wp-content/uploads/2021/01/face4.png")
+mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", location: "ミラノ", description:"イタリアのミラノ在住。好きな食べ物はパスタとピザ", avatar:"https://iconbu.com/wp-content/uploads/2020/01/%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.jpg")
+milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", location: "シドニー", description:"", avatar:"https://iconbu.com/wp-content/uploads/2020/03/%E3%83%91%E3%83%B3%E3%83%80.jpg")
+ron = User.create!(email: "ron@me.com", password: "secret", name: "Ron", location: "デリー", description:"高校生のときに、インドのデリーに引越し。スパイスカレー作りが得意。", avatar:"https://iconbu.com/wp-content/uploads/2022/04/%E3%81%BE%E3%81%A3%E3%81%9F%E3%82%8A%E3%82%B7%E3%83%A3%E3%83%81%E3%81%95%E3%82%93.jpg")
 
 Bookmark.create!(name: "フィンランド", user: tony)
 Bookmark.create!(name: "オーストラリア", user: tony)
