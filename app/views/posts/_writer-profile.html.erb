@@ -1,10 +1,15 @@
-<div class="col-2 mt-5 post-profile">
-  <div class="user-info">
-    <%= image_tag @post.user.avatar, class:"avatar-post me-2" %>
-    <p><%= @post.user.name %></p>
-  </div>
-  <div>
-    <p class="writer-location">📍 <%= @post.user.location %></p>
-    <p class="writer-description"><%= @post.user.description %></p>
+<div class="col-2 mt-5 sticky-profile">
+  <%= link_to posts_path do %>
+    <i class="fa-solid fa-backward"></i>
+  <% end %>
+  <div class="mt-2 post-profile">
+    <div class="user-info">
+      <%= image_tag @post.user.avatar, class:"avatar-post me-2" %>
+      <p><%= @post.user.name %></p>
+    </div>
+    <div>
+      <p class="writer-location">📍 <%= @post.user.location %></p>
+      <p class="writer-description"><%= @post.user.description %></p>
+    </div>
   </div>
 </div>
