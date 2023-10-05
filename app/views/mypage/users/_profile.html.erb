@@ -1,0 +1,17 @@
+<div class="text-center profile-table">
+  <%= image_tag @user.avatar, class:"avatar-profile me-2 my-2" %>
+  <table>
+    <tr>
+      <th>ニックネーム</th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th>居住地</th>
+      <td><%= @user.location %></td>
+    </tr>
+    <tr>
+      <th>自己紹介</th>
+      <td><%= @user.description %></td>
+    </tr>
+  </table>
+</div>
