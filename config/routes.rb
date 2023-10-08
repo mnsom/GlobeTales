@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :mypage do
     resources :posts, only: %i[index show destroy]
-    resources :users, only: %i[show edit update]
+    resources :users, only: %i[show update]
     resources :bookmarks
   end
 end

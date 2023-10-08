@@ -11,10 +11,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <%= simple_form_for(@user) do |f| %>
+          <%= f.input :avatar, label:"プロフィール画像", as: :file, input_html:{ class:'form-control bg-white mb-4'} %>
+          <%= f.input :name, label:"ニックネーム", input_html:{class:'form-control bg-white'}%>
+          <%= f.input :location, label:"居住地", input_html:{class:'form-control bg-white'}%>
+          <%= f.input :description, label:"自己紹介", input_html:{class:'form-control bg-white', rows: 3}%>
+          <div class="text-center">
+            <%= f.submit "保存", class: "btn btn-info text-white col-4" %>
+          </div>
+        <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">変更を保存</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
       </div>
     </div>
