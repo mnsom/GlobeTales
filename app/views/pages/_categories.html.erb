@@ -1,7 +1,7 @@
 <div>
   <ul class="display-categories">
     <% Post::CATEGORIES.each do |category| %>
-      <li><%= category %></li>
+      <li><%= link_to category, category_posts_path(category: category) %></li>
     <% end %>
   </ul>
 </div>
