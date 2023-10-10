@@ -2,7 +2,7 @@
   <% if @post.photos.attached? %>
     <img src="<%= cl_image_path(@post.photos.first.key)%>", class="post-img my-3" >
   <% else %>
-    <%= image_tag "example.png", class:"post-img my-3" %>
+    <img src="<%= "https://source.unsplash.com/random/?#{@post.title}" %>", class="post-img my-3">
   <% end %>
   <div>
     <h3 class="mb-2"><%= @post.title %></h3>
