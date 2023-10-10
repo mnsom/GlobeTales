@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :users, only: :show
 
+  get '/posts/category/:category', to: 'posts#category', as: 'category_posts'
+
   namespace :mypage do
     resources :posts, only: %i[index show destroy]
     resources :users, only: %i[show update]

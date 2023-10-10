@@ -8,6 +8,11 @@ class PostsController < ApplicationController
       end
   end
 
+  def category
+    @category = params[:category]
+    @posts = Post.where(category: @category)
+  end
+
   def new
     @post = Post.new
   end
