@@ -9,9 +9,12 @@
         <% end %>
         <div class="card-post-info">
           <h3 class="mb-2"><%= post.title %></h3>
-          <div class="user-info">
-            <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
-            <p><%= post.user.name %></p>
+          <div class="category-label">
+            <div class="user-info">
+              <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
+              <p><%= post.user.name %></p>
+            </div>
+            <p class="label"><%= post.category %></p>
           </div>
         </div>
       </div>
