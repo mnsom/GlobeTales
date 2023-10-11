@@ -39,6 +39,12 @@
   display: flex;
 }
 
+.post-profile > a {
+  text-decoration: none;
+  color: black;
+}
+
+
 .category-label {
   display: flex;
   justify-content: space-between;
