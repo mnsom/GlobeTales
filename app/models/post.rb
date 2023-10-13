@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  belongs_to :bookmark, optional: true
   has_many_attached :photos, dependent: :destroy
 
   validates :title, :description, :location, :category, presence: true
