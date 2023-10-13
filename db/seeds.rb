@@ -16,10 +16,10 @@ mila = User.create!(email: "mila@me.com", password: "secret", name: "Mila", loca
 milo = User.create!(email: "milo@me.com", password: "secret", name: "Milo", location: "シドニー", description:"", avatar:"https://iconbu.com/wp-content/uploads/2020/03/%E3%83%91%E3%83%B3%E3%83%80.jpg")
 ron = User.create!(email: "ron@me.com", password: "secret", name: "Ron", location: "デリー", description:"高校生のときに、インドのデリーに引越し。スパイスカレー作りが得意。", avatar:"https://iconbu.com/wp-content/uploads/2022/04/%E3%81%BE%E3%81%A3%E3%81%9F%E3%82%8A%E3%82%B7%E3%83%A3%E3%83%81%E3%81%95%E3%82%93.jpg")
 
-Bookmark.create!(name: "フィンランド", user: tony)
-Bookmark.create!(name: "オーストラリア", user: tony)
+fin = Bookmark.create!(name: "フィンランド", user: tony)
+aus = Bookmark.create!(name: "オーストラリア", user: tony)
 
-Post.create!(title: "ヘルシンキの幼稚園に通い始めました", location: "ヘルシンキ", category: "学校", user: mana, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
+Post.create!(bookmark: fin, title: "ヘルシンキの幼稚園に通い始めました", location: "ヘルシンキ", category: "学校", user: mana, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
   Illum recusandae accusamus nam magni, nulla labore pariatur eaque maiores doloremque quae? Reiciendis voluptatum voluptatem praesentium nam odio adipisci autem assumenda voluptatibus similique. Optio, dignissimos sunt itaque delectus iste explicabo.
   Laboriosam fugit, ullam illo autem corporis nihil. Eos voluptas facilis at consectetur nam quia sit perferendis asperiores similique nesciunt, impedit dolorum mollitia, incidunt corrupti optio exercitationem sunt illo ipsum saepe.
   Accusantium eaque officiis voluptatibus quaerat alias, quo vero est nisi, aliquid, fugit dolor aliquam commodi laudantium velit. Consectetur nihil totam, nam eligendi exercitationem in quibusdam neque rerum. Quia, ducimus eum?
@@ -99,7 +99,7 @@ Post.create!(title: "デリーでの高校入学試験について", location: "
   Molestias dolorem, temporibus, quae earum magnam, praesentium repudiandae labore delectus necessitatibus fuga quis quasi! Nulla ad, odio distinctio doloremque, praesentium impedit modi veritatis non inventore unde, nobis ea aliquid perferendis.
   Quibusdam aliquid cum placeat magni delectus natus at laboriosam, maiores labore nulla ex sed ullam temporibus culpa veniam odio. Aut ea modi quis maxime facere asperiores in necessitatibus, quisquam doloremque.
   Quibusdam dolor expedita, commodi asperiores saepe odit, beatae a modi optio ea possimus. Natus at optio velit dolores amet sed rerum? Sit officia nesciunt, harum aliquid blanditiis praesentium pariatur rerum!")
-Post.create!(title: "シドニーの大学進学事情", location: "シドニー", category: "学校", user: milo, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
+Post.create!(bookmark: aus, title: "シドニーの大学進学事情", location: "シドニー", category: "学校", user: milo, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
   Illum recusandae accusamus nam magni, nulla labore pariatur eaque maiores doloremque quae? Reiciendis voluptatum voluptatem praesentium nam odio adipisci autem assumenda voluptatibus similique. Optio, dignissimos sunt itaque delectus iste explicabo.
   Laboriosam fugit, ullam illo autem corporis nihil. Eos voluptas facilis at consectetur nam quia sit perferendis asperiores similique nesciunt, impedit dolorum mollitia, incidunt corrupti optio exercitationem sunt illo ipsum saepe.
   Accusantium eaque officiis voluptatibus quaerat alias, quo vero est nisi, aliquid, fugit dolor aliquam commodi laudantium velit. Consectetur nihil totam, nam eligendi exercitationem in quibusdam neque rerum. Quia, ducimus eum?
@@ -120,7 +120,7 @@ Post.create!(title: "シドニーの大学進学事情", location: "シドニー
   Quibusdam aliquid cum placeat magni delectus natus at laboriosam, maiores labore nulla ex sed ullam temporibus culpa veniam odio. Aut ea modi quis maxime facere asperiores in necessitatibus, quisquam doloremque.
   Quibusdam dolor expedita, commodi asperiores saepe odit, beatae a modi optio ea possimus. Natus at optio velit dolores amet sed rerum? Sit officia nesciunt, harum aliquid blanditiis praesentium pariatur rerum!")
 
-Post.create!(title: "フィンランドでの仕事の見つけ方", location: "ヘルシンキ", category: "仕事", user: mana, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
+Post.create!(bookmark: fin, title: "フィンランドでの仕事の見つけ方", location: "ヘルシンキ", category: "仕事", user: mana, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
   Illum recusandae accusamus nam magni, nulla labore pariatur eaque maiores doloremque quae? Reiciendis voluptatum voluptatem praesentium nam odio adipisci autem assumenda voluptatibus similique. Optio, dignissimos sunt itaque delectus iste explicabo.
   Laboriosam fugit, ullam illo autem corporis nihil. Eos voluptas facilis at consectetur nam quia sit perferendis asperiores similique nesciunt, impedit dolorum mollitia, incidunt corrupti optio exercitationem sunt illo ipsum saepe.
   Accusantium eaque officiis voluptatibus quaerat alias, quo vero est nisi, aliquid, fugit dolor aliquam commodi laudantium velit. Consectetur nihil totam, nam eligendi exercitationem in quibusdam neque rerum. Quia, ducimus eum?
@@ -200,7 +200,7 @@ Post.create!(title: "デリーでの仕事探し", location: "デリー", catego
   Molestias dolorem, temporibus, quae earum magnam, praesentium repudiandae labore delectus necessitatibus fuga quis quasi! Nulla ad, odio distinctio doloremque, praesentium impedit modi veritatis non inventore unde, nobis ea aliquid perferendis.
   Quibusdam aliquid cum placeat magni delectus natus at laboriosam, maiores labore nulla ex sed ullam temporibus culpa veniam odio. Aut ea modi quis maxime facere asperiores in necessitatibus, quisquam doloremque.
   Quibusdam dolor expedita, commodi asperiores saepe odit, beatae a modi optio ea possimus. Natus at optio velit dolores amet sed rerum? Sit officia nesciunt, harum aliquid blanditiis praesentium pariatur rerum!")
-Post.create!(title: "シドニーで日本語教師として働くには", location: "シドニー", category: "仕事", user: milo, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
+Post.create!(bookmark: aus, title: "シドニーで日本語教師として働くには", location: "シドニー", category: "仕事", user: milo, description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo fugiat error illum suscipit dolor! Molestiae natus eum fugit quam aliquam quisquam cumque laborum placeat, dicta quis, dolorum, odit animi.
   Illum recusandae accusamus nam magni, nulla labore pariatur eaque maiores doloremque quae? Reiciendis voluptatum voluptatem praesentium nam odio adipisci autem assumenda voluptatibus similique. Optio, dignissimos sunt itaque delectus iste explicabo.
   Laboriosam fugit, ullam illo autem corporis nihil. Eos voluptas facilis at consectetur nam quia sit perferendis asperiores similique nesciunt, impedit dolorum mollitia, incidunt corrupti optio exercitationem sunt illo ipsum saepe.
   Accusantium eaque officiis voluptatibus quaerat alias, quo vero est nisi, aliquid, fugit dolor aliquam commodi laudantium velit. Consectetur nihil totam, nam eligendi exercitationem in quibusdam neque rerum. Quia, ducimus eum?
