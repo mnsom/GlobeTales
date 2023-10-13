@@ -1,0 +1,23 @@
+<div class="cards">
+  <% @bookmark.posts.each do |post| %>
+    <%= link_to post_path(post), class:"text-decoration-none text-black" do %>
+      <div class="card-post">
+        <% if post.photos.attached? %>
+          <img src="<%= cl_image_path(post.photos.first.key)%>", class="first-img" >
+        <% else %>
+          <img src="<%= "https://source.unsplash.com/random/?#{post.title}" %>", class="first-img">
+        <% end %>
+        <div class="card-post-info">
+          <h3 class="mb-2"><%= post.title %></h3>
+          <div class="category-label">
+            <div class="user-info">
+              <%= image_tag post.user.avatar, class:"avatar-post me-2" %>
+              <p><%= post.user.name %></p>
+            </div>
+            <p class="label"><%= post.category %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
