@@ -1,7 +1,27 @@
 <div class="container my-4">
   <h3 class="text-center mb-4">お気に入り一覧 🧡</h3>
-  <div>
-    <%= link_to "カテゴリーを追加", new_mypage_bookmark_path, class:"btn btn-warning mb-2 float-end new-btn" %>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-warning mb-2 float-end new-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    カテゴリーを追加
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">カテゴリーを追加</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for(@bookmark) do |f| %>
+            <%= f.input :name, label:"タイトル", input_html:{class:'form-control bg-white'} %>
+            <div class="text-center">
+              <%= f.submit "保存", class: "btn btn-info text-white col-4" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
   <%= render "bookmark_cards" %>
 </div>
